@@ -1,0 +1,5 @@
+ <body>
+    <script type="text/javascript">
+      window.location = ./info/index.html;
+    </script>
+  </body>
