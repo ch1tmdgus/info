@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>승현Hub</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        .top-bar {
+            background-color: rgb(21, 21, 21);
+            height: 55px;
+            display: flex; /* Flexbox 레이아웃을 사용하여 수평 가운데 정렬 */
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center;
+            margin-bottom: 30px; /* 탭바 아래 간격을 30px로 설정 */
+        }
+
+        .tab-content {
+            position: relative;
+            height: 500px;
+            width: 100%;
+        }
+
+        .logo {
+            max-width: 30%; /* 로고의 최대 너비를 설정하여 화면 크기에 따라 조절될 수 있도록 함 */
+            max-height: 60%; /* 로고의 최대 높이를 설정하여 화면 크기에 따라 조절될 수 있도록 함 */
+            display: block; /* 이미지를 블록 요소로 만들어 중앙 정렬을 쉽게 함 */
+        }
+
+        .custom-image {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 400px;
+        }
+
+        .text {
+            position: absolute;
+            top: 220px; /* 이미지 바로 아래에 10px 간격으로 위치 */
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <img class="logo" src="/images/로고.png" alt="로고" onclick="location.href='index.html'">
+    </div>
+    <div class="tab-content">
+        <img class="custom-image" src="/images/image_cropped.jpg" alt="이미지" onclick="location.href='1.html'">
+        <p class="text" onclick="location.href='1.html'">Cute boy taking picture of himself</p>
+    </div>
+</body>
+</html>
