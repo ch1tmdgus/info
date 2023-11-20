@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cute boy taking picture of himself</title>
+  <style>
+    h1 {
+      color: white;
+      height: 30px;
+      font-size: 3em;
+    }
+
+    p {
+      color: white;
+      font-size: 1.3em;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('/images/backgroumd.jpg') center/cover no-repeat;
+      height: 100vh;
+    }
+
+    .tab-bar {
+      background-color: rgb(21, 21, 21);
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo { /* 로고의 최대 너비를 설정하여 화면 크기에 따라 조절될 수 있도록 함 */
+      max-height: 60%; /* 로고의 최대 높이를 설정하여 화면 크기에 따라 조절될 수 있도록 함 */
+    }
+
+    .content {
+      margin-top: 60px;
+      /* 탭 바 높이 만큼 여백 추가 */
+      padding: 20px;
+      color: #fff;
+      /* 내용 글자색을 흰색으로 설정 */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="tab-bar">
+    <img class="logo" src="/images/로고.png" alt="로고" onclick="location.href='index.html'">
+  </div>
+
+  <div class="content">
+    <h1>최승현</h1>
+    <p>Cute boy taking picture of himself</p>
+  </div>
+
+</body>
+
+</html>
