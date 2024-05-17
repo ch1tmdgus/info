@@ -1,103 +1,90 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>승현Hub</title>
-    <style>
-        *{
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: black;
-            overflow: hidden;
-            width: 100vw;
-            height: 100vh;
-            --navHeight: 55px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T4C</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 300;
+      font-style: normal;
+    }
 
-        nav {
-            background-color: rgb(34, 34, 34);
-            height: var(--navHeight);
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-        }
+    nav {
+      width: 100%;
+      background-color: #0d0d0da7;
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      padding: 10px 0;
+      z-index: 1000;
+    }
 
-        .tab-content {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
-            justify-content: center;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
 
-        .logo {
-            max-width: 30%; 
-            max-height: 60%; 
-            display: block;
-        }
+    nav li {
+      margin: 0 15px;
+    }
 
-        .image {
-            width: 100%;
-            cursor: pointer;
-            transition: transform 0.1s ease-in-out; 
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
 
-        .image:hover { 
-            transform: scale(1.05); 
-        }
+    nav a:hover {
+      color: #007bff;
+    }
 
-        .text {
-            color: white;
-            text-align: center;
-            width: 100%;
-            font-size: large;
-            cursor: pointer;
-        }
+    h1 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 60px; 
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 200;
+      font-style: normal;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0; 
+      animation: typing 4s steps(30, end) 1s 1 normal both;
+    }
 
-        .container{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: start;
-            gap: 2rem;
-            padding-top: 1.5rem;
-            padding-bottom: 2rem;
-            overflow-y: auto;
-            height: calc(100% - var(--navHeight));
-        }
-
-        p, img{
-            margin: 0;
-        }
-    </style>
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <img class="logo" src="./images/로고.png" alt="로고" onclick="location.href='index.html'">
-    </nav>
-    <div class="container">
-        <div class="tab-content">
-            <img class="image" src="./images/me1_thumbnail.jpg" alt="이미지" onclick="location.href='./sub-pages/me1.html'">
-            <p class="text" onclick="location.href='./sub-pages/me1.html'">Cute Boy Taking Picture Of Himself</p>
-        </div>
-        <div class="tab-content">
-            <img class="image" src="./images/me2_thumbnail.jpg" alt="이미지" onclick="location.href='./sub-pages/me2.html'">
-            <p class="text" onclick="location.href='./sub-pages/me2.html'">Look At Me!</p>
-        </div>
-        <div class="tab-content">
-            <img class="image" src="./images/404.jpg" alt="이미지" onclick="location.href='https://www.instagram.com/ch1tmdgus'">
-            <p class="text" onclick="location.href='https://www.instagram.com/ch1tmdgus'">>> Contact Me! <<</p>
-        </div>
-        <div class="tab-content">
-            <img class="image" src="./images/404.jpg" alt="이미지" onclick="location.href='https://www.instagram.com/ch1tmdgus'">
-            <p class="text" onclick="location.href='https://www.instagram.com/ch1tmdgus'">>> Contact Me! <<</p>
-        </div> 
-    </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cracks.html">Cracks</a></li>
+      <li><a href="mockups.html">Mockups</a></li>
+      <li><a href="#">Tools</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Support</a></li>
+    </ul>
+  </nav>
+  <h1 id="welcome-text">Welcome, User.</h1>
 </body>
 </html>
