@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Graphic Designer Portfolio</title>
+    <style>
+        @import url("https://fastly.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css");
+        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,1,-50..200");
+
+        @font-face {
+            font-family: "Pretendard-Regular";
+            src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Pretendard-Bold";
+            src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(13, 17, 23);
+            font-family: "Pretendard-Regular", Arial, sans-serif;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .stripe {
+            position: absolute;
+            width: 3000px;
+            height: 85px;
+            background: url("essentials/stripe.svg") repeat-x;
+            background-size: contain;
+            z-index: 1;
+            animation: moveStripe 20s linear infinite;
+        }
+
+        @keyframes moveStripe {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: -3000px 0;
+            }
+        }
+
+        .stripe1 {
+            top: 30%;
+            transform: rotate(20deg);
+        }
+
+        .stripe2 {
+            top: 90%;
+            transform: rotate(-25deg);
+        }
+
+        .stripe3 {
+            top: 80%;
+            left: -1700px;
+            transform: rotate(-70deg);
+        }
+
+        .stripe4 {
+            top: 120%;
+            transform: rotate(30deg);
+        }
+
+        .rounded-rectangle {
+            width: 90%;
+            height: 30%;
+            background: rgba(230, 237, 243, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(13, 17, 23, 0.1);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .rectangle-text {
+            font-family: "Pretendard-Regular", Arial, sans-serif;
+            font-size: 60px;
+            color: rgb(230, 237, 243);
+        }
+
+        .rectangle-text-bold {
+            font-family: "WantedSansVariable", Arial, sans-serif;
+            font-size: 100px;
+            font-weight: bold;
+            color: rgb(230, 237, 243);
+            margin-top: 10px;
+        }
+
+        .rectangle-text-bold .regular {
+            font-weight: 400;
+        }
+
+        .dock {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 10px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 3;
+        }
+
+        .dock-icon {
+            font-family: 'Material Symbols Outlined';
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 300,
+                'GRAD' 0,
+                'opsz' 48;
+            font-size: 50px;
+            background: rgba(230, 237, 243, 0.301);
+            border-radius: 12px;
+            color: rgb(230, 237, 243);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 20px;
+            transition: transform 0.3s;
+        }
+
+        .dock-icon:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dock">
+        <span class="dock-icon">home</span>
+        <span class="dock-icon">brush</span>
+        <span class="dock-icon">account_box</span>
+    </div>
+
+    <div class="content">
+        <div class="stripe stripe1"></div>
+        <div class="stripe stripe2"></div>
+        <div class="stripe stripe3"></div>
+        <div class="stripe stripe4"></div>
+        <div class="rounded-rectangle">
+            <div class="rectangle-text">Designer? Student?</div>
+            <div class="rectangle-text-bold">
+                <span class="regular">It's Me!</span> 최승현
+            </div>
+        </div>
+        <div class="rounded-rectangle">
+            <div class="rectangle-text">Additional Box</div>
+            <div class="rectangle-text-bold">
+                <span class="regular">Content Here</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
