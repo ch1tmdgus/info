@@ -1,163 +1,141 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+  <link rel="stylesheet" href="style.css" />
+
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3D Graphic Designer Portfolio</title>
-    <style>
-        @import url("https://fastly.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css");
-        @font-face {
-            font-family: "Pretendard-Regular";
-            src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: "Pretendard-Bold";
-            src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
-            font-weight: 700;
-            font-style: normal;
-        }
-
-        body {
-            background-color: rgb(13, 17, 23);
-            font-family: "Wanted Sans Variable", sans-serif;
-            display: flex;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: rgb(230, 237, 243);
-            flex-direction: column;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .container {
-            width: 90%;
-            height: 50%;
-            background: rgba(230, 237, 243, 0.1);
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(13, 17, 23, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 30px;
-            margin: 20px;
-            position: fixed;
-            top: 20px;
-            overflow: auto;
-        }
-
-        .text-section {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .small-text {
-            font-family: "Pretendard-Regular", Arial, sans-serif;
-            font-size: 40px;
-            margin-bottom: 10px;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out 0.5s;
-        }
-
-        .medium-text {
-            font-family: "WantedSansVariable", Arial, sans-serif;
-            font-size: 54px;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out 1s;
-        }
-
-        .bold {
-            font-weight: bold;
-        }
-
-        .tab-bar {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            position: fixed;
-            bottom: 30px;
-            gap: 10px;
-            transform: translateY(100%);
-            animation: slide-up 1s ease-in-out forwards;
-        }
-
-        .tab {
-            width: 100px;
-            height: 30px;
-            background: rgba(230, 237, 243, 0.021);
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: "Pretendard-Regular", Arial, sans-serif;
-            font-size: 15px;
-            box-shadow: 0 4px 8px rgba(13, 17, 23, 0.1);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .tab.selected {
-            background: rgb(230, 237, 243);
-            color: rgb(13, 17, 23);
-        }
-
-        .fade-in {
-            opacity: 1;
-        }
-
-        .logo {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            transition: opacity 0.5s ease-in-out 0.5s;
-
-        }
-
-        @keyframes slide-up {
-            to {
-                transform: translateY(0);
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container fade-in">
-        <div class="text-section">
-            <div class="small-text">Developer? Student?</div>
+    <title>N4C</title>
+  </head>
+  
+  <body>
+    <div class="container1" id="home">
+      <div class="text-section">
+        <div class="small-text">Title1</div>
+      </div>
+      <div class="text-section">
+        <div class="medium-text">
+         text<span class="bold">text</span>text
         </div>
-        <div class="text-section">
-            <div class="medium-text">반갑습니다 디자이너 <span class="bold">최승현</span>입니다</div>
-        </div>
-        <img src="essentials/logo_black.png" alt="Logo" class="logo">
+      </div>
+      <img src="essentials/logo_black.png" alt="Logo" class="logo" />
     </div>
+
+    <div class="container2">
+      <div class="text-section">
+        <div class="small-text">Title2</div>
+      </div>
+      <div class="text-section">
+        <div class="medium-text">
+          sample text
+        </div>
+      </div>
+    </div>
+
+    <div class="container3" id="creations">
+      <div class="text-section">
+        <div class="small-text"><span class="bold">작업물</span></div>
+      </div>
+      <!-- Removed the My Creations text section here -->
+      <div class="slider">
+        <div class="slides">
+          <img src="creations/1.png" alt="Image 1" class="image slide">
+          <img src="creations/2.png" alt="Image 2" class="image slide">
+          <img src="creations/3.png" alt="Image 3" class="image slide">
+        </div>
+        <div class="navigation">
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container4">
+      <div class="text-section">
+        <div class="small-text">Title4</div>
+      </div>
+      <div class="text-section">
+         sample text 
+      </div>
+    </div>
+
+    <div class="container5" id="contacts">
+      <div class="text-section">
+        <div class="small-text">Contacts</div>
+      </div>
+      <div class="text-section">
+         sample text
+      </div>
+    </div>
+
     <div class="tab-bar">
-        <div class="tab selected" onclick="selectTab(this)">Home</div>
-        <div class="tab" onclick="selectTab(this)">Creations</div>
-        <div class="tab" onclick="selectTab(this)">Contacts</div>
+      <div class="tab selected" onclick="selectTab(this, 'home')">메인</div>
+      <div class="tab" onclick="selectTab(this, 'creations')">작업물</div>
+      <div class="tab" onclick="selectTab(this, 'contacts')">연락망</div>
     </div>
 
     <script>
-        function selectTab(selectedTab) {
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('selected');
-            });
-            selectedTab.classList.add('selected');
-        }
-
-        window.addEventListener('load', () => {
-            document.body.classList.add('fade-in');
-            document.querySelector('.small-text').classList.add('fade-in');
-            document.querySelector('.medium-text').classList.add('fade-in');
-
+      function selectTab(selectedTab, section) {
+        document.querySelectorAll(".tab").forEach((tab) => {
+          tab.classList.remove("selected");
         });
+        selectedTab.classList.add("selected");
+
+        if (section === 'creations') {
+          document.querySelector("#creations").scrollIntoView({ behavior: "smooth" });
+        } else if (section === 'home') {
+          document.querySelector("#home").scrollIntoView({ behavior: "smooth" });
+        } else if (section === 'contacts') {
+          document.querySelector("#contacts").scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      let slideIndex = 0;
+      showSlide(slideIndex);
+
+      function showSlide(index) {
+        const slides = document.querySelectorAll('.slide');
+        if (index >= slides.length) {
+          slideIndex = 0;
+        } else if (index < 0) {
+          slideIndex = slides.length - 1;
+        } else {
+          slideIndex = index;
+        }
+        slides.forEach((slide, i) => {
+          slide.style.display = (i === slideIndex) ? 'block' : 'none';
+        });
+      }
+
+      function moveSlide(step) {
+        showSlide(slideIndex + step);
+      }
+
+      // Auto-select tab while scrolling
+      const sections = document.querySelectorAll(".container1, .container3, .container5");
+      const options = { root: null, threshold: 0.6 };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.getAttribute("id");
+            document.querySelectorAll(".tab").forEach((tab) => {
+              tab.classList.remove("selected");
+            });
+            if (sectionId === "home") {
+              document.querySelector(".tab:nth-child(1)").classList.add("selected");
+            } else if (sectionId === "creations") {
+              document.querySelector(".tab:nth-child(2)").classList.add("selected");
+            } else if (sectionId === "contacts") {
+              document.querySelector(".tab:nth-child(3)").classList.add("selected");
+            }
+          }
+        });
+      }, options);
+
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
     </script>
-</body>
+  </body>
 </html>
