@@ -1,0 +1,210 @@
+@import url("https://fastly.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css");
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(13, 17, 23);
+  font-family: "Wanted Sans Variable", sans-serif;
+  margin: 0;
+  padding: 0 10px;
+  color: rgb(230, 237, 243);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  align-items: center;
+}
+
+.container1,
+.container2,
+.container3,
+.container4,
+.container5 {
+  width: 90%;
+  max-width: 900px;
+  height: 400px;
+  background: rgba(230, 237, 243, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(13, 17, 23, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 10px 0;
+}
+
+.text-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.small-text {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.medium-text {
+  font-family: "WantedSansVariable", Arial, sans-serif;
+  font-size: 54px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.tab-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 30px;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.tab {
+  width: 100px;
+  height: 30px;
+  background: rgb(40, 45, 49);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.131);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab.selected {
+  background: rgb(230, 237, 243);
+  color: rgb(13, 17, 23);
+}
+
+@media (max-width: 600px) {
+  .small-text {
+    font-size: 30px;
+  }
+
+  .medium-text {
+    font-size: 40px;
+  }
+
+  .container1,
+  .container2,
+  .container3,
+  .container4,
+  .container5 {
+    height: auto;
+    padding: 20px;
+  }
+
+  .tab {
+    width: 80px;
+    height: 25px;
+    font-size: 13px;
+  }
+}
+.image-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.image {
+  max-width: 30%; /* Ensures each image takes up no more than 30% of the container width */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.container3 {
+  position: relative; /* Needed to position navigation buttons within the container */
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Full height of the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  display: none;
+  max-width: 100%; /* Ensures the image can scale up to its container's width */
+  max-height: 100%; /* Ensures the image can scale up to its container's height */
+  border-radius: 20px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; /* Allow clicking on the images under the navigation */
+}
+
+.prev,
+.next {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 50px; /* Equal width and height for perfect circle */
+  height: 50px; /* Equal width and height for perfect circle */
+  cursor: pointer;
+  border-radius: 50%; /* This makes the button a circle */
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto; /* Ensure the buttons remain clickable */
+}
+
+.prev {
+  position: absolute;
+  left: 20px;
+}
+
+.next {
+  position: absolute;
+  right: 20px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
